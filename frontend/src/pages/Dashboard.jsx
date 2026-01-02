@@ -45,12 +45,21 @@ const Dashboard = () => {
     };
 
     const deleteContact = async (id) => {
+        if (!id) {
+            console.error("Delete failed: No ID provided");
+            return;
+        }
         if (!window.confirm("Are you sure you want to delete this contact?")) return;
+
         try {
-            await axios.delete(`/api/contacts/${id}`);
+            console.log(`Attempting to delete contact: ${id}`);
+            const res = await axios.delete(`/api/contacts/${id}`);
+            console.log("Delete response:", res.data);
             setContacts(contacts.filter(c => c._id !== id));
         } catch (err) {
-            alert("Error deleting contact");
+            console.error('Delete error:', err);
+            const errorMessage = err.response?.data?.message || err.message || "Unknown error";
+            alert("Error deleting contact: " + errorMessage);
         }
     };
 
