@@ -2,7 +2,8 @@
 
 A robust, secure, and visually stunning **Contact Management Application** built with the MERN stack. Designed for efficient personal network management with a focus on UI/UX excellence and code quality.
 
-![Dashboard Preview](/C:/Users/Anjali%20Varma/.gemini/antigravity/brain/b8e13117-61a7-4027-a7f6-92131fa319bb/uploaded_image_1767393583283.png)
+## 📸 Dashboard Preview
+![Dashboard Preview](./screenshots/dashboard.png)
 
 ## 🚀 Features
 
@@ -153,7 +154,7 @@ contact-manager/
 
 ## 👨‍💻 Author
 
-**Anjali Varma**
+**Anjali Verma**
 *Full Stack Developer*
 
 ---
