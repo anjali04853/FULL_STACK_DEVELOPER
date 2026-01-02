@@ -1,0 +1,16 @@
+{
+  "name": "contact-manager",
+  "version": "1.0.0",
+  "description": "MERN Contact Manager",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "concurrently \"npm run server-dev\" \"npm run client-dev\"",
+    "server-dev": "cd backend && npm start",
+    "client-dev": "cd frontend && npm run dev",
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+  },
+  "dependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
